@@ -76,7 +76,9 @@ fn parse_markdown(file_name: &str) {
             output.push_str("</p>");
         }
 
-        tokens.push(output);
+        if output != "<p></p>" {
+            tokens.push(output);
+        }
     }
 
     println!("{:?}", tokens);
