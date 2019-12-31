@@ -1,5 +1,6 @@
 [package]
 name = "markdown-compiler"
+description = "A tiny markdown compiler"
 version = "0.1.0"
 authors = ["Julian Poma <poma.nob@gmail.com>"]
 edition = "2018"
