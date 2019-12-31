@@ -10,20 +10,12 @@ fn get_title() -> String {
     title
 }
 
-fn print_title() {
-    println!("{}", get_title());
-}
-
-fn print_help() {
-    println!("{}", String::from("Usage: mkdc <file.md>"));
-}
-
-fn print_separation_bars(separator: &str, longitude: usize) {
+fn print_devider(separator: &str, longitude: usize) {
     println!("{}", separator.repeat(longitude));
 }
 
 fn parse_markdown(file_name: &str) {
-    print_title();
+    println!("{}", get_title());
     println!("[INFO] Parsing {} ...", file_name);
 
     let file_path = Path::new(file_name);
@@ -87,8 +79,8 @@ fn parse_markdown(file_name: &str) {
 fn usage() {
     let title = get_title();
     println!("{}", title);
-    print_help();
-    print_separation_bars("=", title.len())
+    println!("{}", String::from("Usage: mkdc <file.md>"));
+    print_devider("=", title.len())
 }
 
 fn main() {
