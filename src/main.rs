@@ -73,6 +73,8 @@ fn parse_markdown(f: &str) {
 
     let file = open_file(&file_name);
 
+    // This could be handled with a Enum..
+    // Also add support for code blocks, bold, italics, etc..
     let mut _h1_tag: bool = false;
     let mut _h2_tag: bool = false;
     let mut _p_tag: bool = false;
